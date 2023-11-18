@@ -32,7 +32,7 @@ function setupNote(id) {
 }
 
 function setupCard(id) {
-  if (isAddSucceeded) {
+  if (isAddSucceeded && localStorage.length !== 0) {
     const table = Object.keys(localStorage).sort();
     id = "textArea" + (parseInt(table[table.length - 1].slice(8)) + 1);
   }
